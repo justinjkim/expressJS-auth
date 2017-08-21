@@ -1,7 +1,8 @@
 const express = require('express');
 const mustache = require('mustache-express');
 const session = require('express-session');
-const adminRouter = require('./routes/admin.js');
+const data = require('./userData.js');
+//const adminRouter = require('./routes/admin.js');
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.set('views', ['./views', './views/admin']);
 //app.use('/', adminRouter);
 
 app.get('/', function(req, res) {
-	res.send("hello there, if you have reached this, something is wrong.");
+	res.render("index.mustache");
 })
 
 
