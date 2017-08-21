@@ -10,7 +10,8 @@ app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('views', ['./views', './views/admin']);
 
-app.use('/', adminRouter);
+// not gonna use router yet
+//app.use('/', adminRouter);
 
 app.get('/', function(req, res) {
 	res.send("hello there, if you have reached this, something is wrong.");
